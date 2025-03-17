@@ -8,14 +8,15 @@ Descripcion del Proyecto:
 
 Estructura del proyecto:
     Mi proyecto tiene los siguientes archivos:
-    - Recipientes.java -> Implementa todos los metodos de la interfaz, tambien tiene el metodo main para ejecutar el programa 
+    - Main.java -> Tiene el metodo main donde se puede ejecutar el menu para acceder a todos los metodos
+    - Recipientes.java -> Implementa todos los metodos de la interfaz
     - ServiciosRecipiente.java -> Interfaz que define los metodos esenciales que implemento en recipientes 
     - README.md -> Es este documento, y trae una pequeña descripción del proyeccto y como ejecutarlo 
 
 Instrucciones:
     1. Clonar el repositorio con: git clone 
-    2. Compliar los archivos con: javac ServiciosRecipiente.java     javac Recipientes.java
-    3. Ejecutar el programa con: java Recipientes
+    2. Compliar los archivos con: javac *.java
+    3. Ejecutar el programa con: java Main
 
 Uso de IDE:
     No se utilizo como tal una IDE, para desarrollar el proyecto utilice 'vim' como editor de texto para editar y escribir mi codigo  
