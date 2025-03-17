@@ -48,6 +48,7 @@ public interface ServiciosRecipiente{
 	* @return La cantidad de l ́ı quido que pose  ́ıa.
 	*/
 	public double vacia ();
+	
 	/**
 	* Vierte el contenido del recipiente en otro respetando su
 	* capacidad m ́a xima . En caso de haber excedente , se debe guardar
@@ -60,7 +61,8 @@ public interface ServiciosRecipiente{
 	*
 	* @param otro El recipiente donde se vertir  ́a el l ́ı quido actual .
 	*/
-	//public void vierte ( Recipiente otro );
+	public void vierte ( Recipiente otro );
+	
 	/**
 	* Indica si el recipiente tiene exactamente las mismas
 	* dimensiones que otro . Solo revisamos las dimensiones , la
@@ -70,7 +72,8 @@ public interface ServiciosRecipiente{
 	* @return true si tienen las mismas dimensiones , false en otro
 	* caso .
 	*/
-	//public boolean mismasDimensiones ( Recipiente otro );
+	public boolean mismasDimensiones ( Recipiente otro );
+	
 	/**	
 	* Indica si el recipiente tiene exactamente la misma
 	* capacidad total que otro . Solo revisamos la capacidad total ,
@@ -80,14 +83,16 @@ public interface ServiciosRecipiente{
 	* @return true si tienen la misma capacidad total , false en otro
 	* caso .
 	*/
-	//public boolean mismaCapacidad ( Recipiente otro );
+	public boolean mismaCapacidad ( Recipiente otro );
+	
 	/**
 	* Indica si el recipiente tiene mayor cantidad actual que otro .
 	*
 	* @param otro El recipiente con que se comparar  ́a.
 	* @return true si tiene mayor cantidad , false en otro caso .
 	*/
-	//public boolean contieneMas ( Recipiente otro );
+	public boolean contieneMas ( Recipiente otro );
+	
 	/**
 	* Indica si el recipiente tiene mayor capacidad restante que
 	* otro .
@@ -96,7 +101,8 @@ public interface ServiciosRecipiente{
 	* @return true si tiene mayor capacidad restante , false en otro
 	* caso .
 	*/
-	//public boolean cabeMas ( Recipiente otro );
+	public boolean cabeMas ( Recipiente otro );
+	
 	/**
 	* Crea un nuevo recipiente vac  ́ıo cuya capacidad total es igual
 	* a la cantidad actual del recipiente invocante .
@@ -111,12 +117,13 @@ public interface ServiciosRecipiente{
 	* @return Un nuevo recipiente vac  ́ıo con capacidad total igual a
 	* la cantidad actual del recipiente invocante .
 	*/
-	//public Recipiente creaContenedorJusto ();
+	public Recipiente creaContenedorJusto ();
+	
 	/**
 	* Devuelve una cadena que exhiba con buen formato las
 	* dimensiones , capacidad y cantidad actual del recipiente .
 	*
 	* @return La cadena correspondiente al recipiente .
 	*/
-	//public String muestra ();
+	public String muestra ();
 }
