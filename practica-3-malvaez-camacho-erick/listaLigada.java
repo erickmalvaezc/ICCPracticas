@@ -1,6 +1,10 @@
 class ListaLigada{
 	Nodo cabeza;
 	
+	public void listaLigada(){
+		cabeza.siguiente = null;
+	}
+
 	public void insertar(int elemento){
 		Nodo nuevo = new Nodo();
 		nuevo.elemento = elemento;
