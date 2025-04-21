@@ -11,7 +11,7 @@ Inconvenientes:
 
 Instrucciones:
     1. Despues de haber clonado el proyecto ir hasta el proyecto con:
-        cd proyecto-2-malvaez-camacho-erick
+        cd proyecto02
     2. Ya que estes en el proyecto compila los archivos con:
         javac *.java
     3. Corre el proyecto con:
