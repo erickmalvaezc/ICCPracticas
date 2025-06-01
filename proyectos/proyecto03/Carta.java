@@ -1,65 +1,66 @@
-public final class Carta{
-    //creamos atributos especificos para asignar a nuestras instancias 
-    public enum Tamano{Pequeno, Grande}; 
-    public enum Brazo{Uno, Dos}; 
-    public enum Color{Naranja, Azul}; 
-
-    private final Tamano tamano; 
-    private final Brazo brazo;
-    private final Color color; 
-    private final boolean lentes; //boolean porque puede o no puede tener lentes 
-    private final boolean palomitas; // igual bool porque si/no tiene palomitas 
-
-    //constructor que inicializa nuestras instancias
-    public Carta(Tamano tamano, Brazo brazo, Color color, boolean lentes, boolean palomitas){
-        this.tamano = tamano;
-        this.brazo = brazo; 
-        this.color = color; 
-        this.lentes = lentes; 
-        this.palomitas = palomitas; 
+// Carta.java
+public class Carta {
+    private int tamaño; // 0 = pequeño, 1 = grande
+    private int color; // 0 = cafe, 1 = negro, 2 = blanco
+    private int brazos; // 0 = uno, 1 = dos
+    private int gafas; // 0 = sin gafas, 1 = con gafas
+    private int palomitas; // 0 = sin palomitas, 1 = con palomitas
+    
+    public Carta(int tamaño, int color, int brazos, int gafas, int palomitas) {
+        this.tamaño = tamaño;
+        this.color = color;
+        this.brazos = brazos;
+        this.gafas = gafas;
+        this.palomitas = palomitas;
     }
-
-    //getters
-    public Tamano getTamano(){
-        return tamano; 
+    
+    // Checa si dos cartas son iguales o solo tienen una diferencia
+    public boolean esCompatible(Carta otra) {
+        if (this.equals(otra)) return true; // son identicas
+        
+        int diferencias = 0;
+        if (this.tamaño != otra.tamaño) diferencias++;
+        if (this.color != otra.color) diferencias++;
+        if (this.brazos != otra.brazos) diferencias++;
+        if (this.gafas != otra.gafas) diferencias++;
+        if (this.palomitas != otra.palomitas) diferencias++;
+        
+        return diferencias == 1; // solo una diferencia permitida
     }
-
-    public Brazo getBrazo(){
-        return brazo; 
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Carta carta = (Carta) obj;
+        return tamaño == carta.tamaño && color == carta.color && brazos == carta.brazos && gafas == carta.gafas && palomitas == carta.palomitas;
     }
-
-    public Color getColor(){
+    
+    @Override
+    public String toString() {
+        String[] tamaños = {"P", "G"}; // pequeño, grande
+        String[] colores = {"\u001B[33mC", "\u001B[37mN", "\u001B[36mB"}; // cafe, negro, blanco
+        String brazoStr = (brazos == 0) ? "1" : "2";
+        String gafaStr = (gafas == 0) ? "-" : "G";
+        String palomitaStr = (palomitas == 0) ? "-" : "P";
+        
+        return colores[color] + tamaños[tamaño] + brazoStr + gafaStr + palomitaStr + "\u001B[0m";
+    }
+    
+    // getters por si los necesito despues
+    public int getTamaño() { 
+        return tamaño;
+    }
+    public int getColor() { 
         return color; 
     }
-
-    public boolean getLentes(){
-        return lentes; 
+    public int getBrazos() { 
+        return brazos; 
     }
-
-    public boolean getPalomitas(){
+    public int getGafas() { 
+        return gafas; 
+    }
+    public int getPalomitas() { 
         return palomitas; 
-    }
-
-    //metodo que evalua las diferencias de las cartas
-    public int diferencias(Carta otra){
-        int error = 0; //contador que nos contará el numero de diferencias de nuestra ronda 
-
-        //si el tamaño de nuestra carta anterior 
-        if(tamano != otra.tamano){
-            error ++; 
-        }
-        if(brazo != otra.brazo){
-            error ++; 
-        }
-        if(lentes != otra.lentes){
-            error++; 
-        }
-        if(color != otra.color){
-            error++; 
-        }
-        if(palomitas != otra.palomitas){
-            error ++; 
-        }
-        return error; 
     }
 }
