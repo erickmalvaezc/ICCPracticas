@@ -24,6 +24,6 @@ Instrucciones para ejecutarlo:
     
 Inconvenientes:
     Fue la primera vez que ambos utilizabamos github de forma colaborativa por asi decirlo, entonces chocaron muchas veces las cosas que uno asi con los cambios del otro, o las ramas que creamos y luego para incluirlas es un relago, pero en general nos supimos adaptar y trabajar en equipo, fue muy nutritivo el trabajar asi ya que es interesante ver y comparar las ideas tenemos, ademas de ir compartiendo y fortaleciendo conocimientos mutuamente
-
+    Támbien nos costo trabajo la parte grafica de las cartas, se terminaba viendo muy amontonado y se terminaba por no entender las caracteristicas de las cartas, por eso mejor decidimos dejarlo mas como con la definición de las cartas para que fuera un poco más entendible que estaba pasando con el juego
 IDE:
     No se utilizaron, el trabajo se realizo utilizando VIM y NeoVIM
