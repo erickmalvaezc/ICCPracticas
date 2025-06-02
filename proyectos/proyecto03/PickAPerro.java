@@ -1,6 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
+
 public class PickAPerro {
     private Lista<Carta> mazo;
     private Carta[][] zonaJuego; // 5 filas por 6 columnas
@@ -85,11 +86,13 @@ public class PickAPerro {
         System.out.println("=".repeat(50));
         
         // muestro los puntos actuales
-        System.out.println("Puntos - " + usuario.getNombre() + ": " + usuario.getPuntos() + " | " + ia.getNombre() + ": " + ia.getPuntos());
+        System.out.println("Puntos - " + usuario.getNombre() + ": " + usuario.getPuntos() + 
+                          " | " + ia.getNombre() + ": " + ia.getPuntos());
         
         // carta guia del jugador actual
         Carta ultimaCarta = jugadorActual.getUltimaCarta();
-        System.out.println("\nCarta guia de " + jugadorActual.getNombre() + ": " + (ultimaCarta != null ? ultimaCarta : "Sin carta"));
+        System.out.println("\nCarta guia de " + jugadorActual.getNombre() + ": " + 
+                          (ultimaCarta != null ? ultimaCarta : "Sin carta"));
         
         // zona de juego completa
         System.out.println("\nZona de juego:");
